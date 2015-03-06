@@ -79,10 +79,6 @@ and then turn it back off by posting this one:
 For a full explanation of all component states and values, check out the sample code in the /Examples directory and the table of Component Notifications at the end of this document.
 
 
-# Basic Circuits
-
-
-
 # Component Input/Output Notifications
 
 The incoming notifications tell a lot about how a component's state changed, and an outgoing notification needs to carry the kinds of details about how an output component should change.
@@ -91,6 +87,7 @@ See the example code in the /Examples directory for a guide to using the notific
 
 The "name" value is always the name assigned to the component in the Control Board interface. Otherwise, here's an overview of the attributes received when observing for a "ControlBoardInput" or sent with a "ControlBoardOutput" notification:
 
+```
 - Input: Button/Switch
 	"name"
 	"type": "Button"
@@ -127,6 +124,5 @@ The "name" value is always the name assigned to the component in the Control Boa
 	"name"
 	"state": "on", "off"
 	"value": When the state is "on", the value is a float between 0 and 1 of the speed the motor should turn
+```
 
-
-# Special thanks

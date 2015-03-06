@@ -1,0 +1,12 @@
+syntax:glob
+
+*.pyc
+.DS_Store
+cov
+.coverage
+applet
+Firmata-*
+Firmata
+hardwareAbstraction
+docs/_build
+build/
