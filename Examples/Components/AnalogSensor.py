@@ -13,7 +13,7 @@ class AnalogSensorDemo:
         self.w = vanilla.Window((200, 150), "Analog Sensor")
         self.w.titleValue = vanilla.TextBox((20, 20, -10, 25), "Sensor value:")
         self.w.slider = vanilla.Slider((20, 40, -20, 25), maxValue=1)
-        self.w.titleName = vanilla.TextBox((20, 70, -20, 25), "Compoonent Name:")
+        self.w.titleName = vanilla.TextBox((20, 70, -20, 25), "Component Name:")
         self.w.componentName = vanilla.EditText((20, 100, -20, 25), "My Component")
         self.w.open()
         
