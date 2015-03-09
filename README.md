@@ -12,6 +12,17 @@ It makes generous use of the Breakfastserial, pyFirmata and serial Python librar
 - http://pyserial.sourceforge.net
 
 
+## The state of things
+
+I’m considering this to be a proof of concept for quickly getting simple inputs and ouputs from an Arduino into RoboFont. Currently it doesn’t save any of the settings for which components are attached to a board, and it still requires knowing the names and types of components that other scripts may be looking for.
+
+My plan is to start using this extension as it is to see how I want configurations to be kept: should there be presets for each prototyping board that I attach to the Arduino? Should another extension be able to send a notification to Control Board with a list of component names that it’s looking for, so that the user can quickly get their buttons and LEDs matching up with what another script needs? I’d like to hear more about how others use the extension as well.
+
+The code also makes use of multithreading in Python in a way that might not be entirely safe — it’s definitely possible to crash RoboFont if an action in one thread isn’t able to keep up with one in another thread. This is something I’d like to revisit.
+
+More code examples, shopping lists, and sample circuits will be on their way soon, as well. Otherwise, I think it’s a pretty quick and easy way to get started with making a custom hardware controller for RoboFont, so please give it a try!
+
+
 
 ## A special Arduino note for Mac OS 10.9 and 10.10 users:
 
