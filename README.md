@@ -107,7 +107,7 @@ postEvent("ControlBoardOutput", name="My LED", state="off")
 
 For a full explanation of all component states and values, check out the sample code in the `/Examples` directory and the table of Component Notifications at the end of this document.
 
-If you're new to the Arduino, a [[shopping list|Shopping-List]] is coming together on this repo's wiki. More pages will be added with circuit examples as well.
+If you're new to the Arduino, a [shopping list](Shopping-List) is coming together on this repo's wiki. More pages will be added with circuit examples as well.
 
 
 ## Component Input/Output Notifications
