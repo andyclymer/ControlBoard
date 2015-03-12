@@ -12,7 +12,7 @@ resourcesPath = os.path.join(basePath, "resources")
 B = ExtensionBundle()
 
 B.name = "ControlBoard"
-B.version = "0.2b"
+B.version = "0.21b"
 B.mainScript = "ControlBoard.py"
 
 B.developer = "Andy Clymer"

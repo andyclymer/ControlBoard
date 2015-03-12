@@ -151,19 +151,18 @@ class ComponentRGBLED(object):
                         if colorName in colorNames:
                             colorValue = colorNames[colorName]
                     
-                    else:
-                        if len(value) == 1:
-                            # One single value, set all R, G, and B to the same level
-                            colorValue = (fixValue(value), fixValue(value), fixValue(value))
+                    elif type(value) in [types.FloatType, types.IntType]:
+                        # One single value, set all R, G, and B to the same level
+                        colorValue = (fixValue(value), fixValue(value), fixValue(value))
+                    
+                    elif len(value) == 2:
+                        # Two values, this is Hue and Level (saturation is always at 100%)
+                        colorValue = colorsys.hsv_to_rgb(value[0], 1, value[1])
                         
-                        elif len(value) == 2:
-                            # Two values, this is Hue and Level (saturation is always at 100%)
-                            colorValue = colorsys.hsv_to_rgb(value[0], 1, value[1])
-                            
-                        elif len(value) == 3:
-                            # Three values: R, G, B
-                            colorValue = (fixValue(value[0]), fixValue(value[1]), fixValue(value[2]))
-
+                    elif len(value) == 3:
+                        # Three values: R, G, B
+                        colorValue = (fixValue(value[0]), fixValue(value[1]), fixValue(value[2]))
+                        
                 # Then, set the state:
                 if info["state"] == "on":
                     # Scale the values by 100

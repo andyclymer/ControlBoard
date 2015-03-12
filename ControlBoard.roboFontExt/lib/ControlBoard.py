@@ -13,6 +13,7 @@ from components import *
 import BreakfastSerial as BSer
 
 from mojo.events import addObserver, removeObserver, postEvent
+from mojo.extensions import getExtensionDefault, setExtensionDefault
 import vanilla
 import string
 
@@ -112,13 +113,13 @@ class ControlBoard:
         
         # Board components are configured as a list of dictionaries.
         # The component objects aren't built and initilized with the Arduino until "Apply" is clicked
-        self.components = []
+        self.components = getExtensionDefault("lastComponentList", fallback=[])
         
         
         # ---------- Window ----------
         
         self.w = vanilla.Window((300, 400), 
-                "ControlBoard 0.15b", minSize=(300, 350), maxSize=(300, 1000), autosaveName="ControlBoardWindow")
+                "ControlBoard 0.21b", minSize=(300, 350), maxSize=(300, 1000), autosaveName="ControlBoardWindow")
         self.w.bind("close", self._closingWindowCallback)
         
         yPos = 10
@@ -187,7 +188,9 @@ class ControlBoard:
         self.w.applyButton = vanilla.SquareButton((230, yPos, -10, 25),
                 "Apply", sizeStyle="small", callback=self.applyChanges)
         self.w.applyButton.enable(False)
-                
+        
+        # Set up the list of components
+        self.updateListContents()
         self.w.open()
         self._tryConnecting(None)
         
@@ -373,6 +376,20 @@ class ControlBoard:
         # Finished applying changes...
         self.w.applyButton.enable(False)
         self.updateListContents()
+        self.saveComponentList()
+    
+    
+    def saveComponentList(self):
+        # Save the component list as an extension user default, just without the component objects.
+        cleanedComponentList = []
+        for component in self.components:
+            cleanedComponentList.append(
+                {"type": component["type"], 
+                "name": component["name"],
+                "pins": component["pins"], 
+                "object": None,
+                "problem": True})
+        setExtensionDefault("lastComponentList", cleanedComponentList)
                  
     
     def _closingWindowCallback(self, sender):
