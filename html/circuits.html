@@ -2,22 +2,7 @@
 <head>
 <title>ControlBoard Docs!</title>
 
-    <style type="text/css">
-    <!--
-    
-    h1 {font-family: 'American Typewriter'; font-size: 40; font-weight: normal;}
-    h2 {font-family: 'American Typewriter'; font-size: 22; font-weight: bold; letter-spacing: 1px;}
-    h3 {font-family: 'American Typewriter'; font-size: 17; font-weight: normal; letter-spacing: 0.5px;}
-    .bigLink {font-family: 'American Typewriter'; font-size: 17; font-weight: normal; letter-spacing: 0.5px;}
-    body {font-family: 'Helvetica Neue'; font-size:13;}
-    
-    a:link {color:#3333cc; text-decoration:none;}
-    a:visited {color:#3333cc; text-decoration:none;}
-    a:hover {color:#33ccff; text-decoration:none;}
-    a:active {color:#ccccff; text-decoration:none;}
-    -->
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="./style.css" />
 
 </head>
 
@@ -25,7 +10,7 @@
 
 <body>
 
-
+<div style="width:380px">
 
 <h1>Control Board</h1>
 <h2>Basic Circuits</h2>
@@ -33,11 +18,11 @@
 <br>
 <img src="./images/button.svg" width=380>
 <h3>Button</h3>
-<p>The Digital Input pins on an Arduino will register as being "High" or "On" when power is applied, and will register as "Low" or "Off" when they are instead connected to ground.</p>
+<p>The Digital Input pins on an Arduino will register as being &ldquo;High&rdquo; or &ldquo;On&rdquo; when power is applied, and will register as &ldquo;Low&rdquo; or &ldquo;Off&rdquo; when they are instead connected to ground.</p>
 
 <p>Connect one leg of the button to the 5 volt supply of power. The second leg of the button will need to be connected to your choice of Digital input pins and also connected to a resistor which is connected to ground. A wide range of resistor values will do, anything between about a 1k Ohm or 10k Ohm resistor will be fine.</p>
 	
-<p>When the button up and is not being pressed a circuit will be made between the Digital pin on the Arduino and the Ground, by way of the resistor. This will give the Arduino the signal that this pin is "Low" or that the button is not being pressed. However, when the button is pressed, power will flow from the 5 Volt connection to the Digital pin, bypassing the resistor, since power wants to flow with the path of least resistance. This will give the Arduino the signal that a change has happened on this input pin.</p>
+<p>When the button up and is not being pressed a circuit will be made between the Digital pin on the Arduino and the Ground, by way of the resistor. This will give the Arduino the signal that this pin is &ldquo;Low&rdquo; or that the button is not being pressed. However, when the button is pressed, power will flow from the 5 Volt connection to the Digital pin, bypassing the resistor, since power wants to flow with the path of least resistance. This will give the Arduino the signal that a change has happened on this input pin.</p>
 
 <p>Note that you must use a resistor for your connection between the pin and ground, without a resistor a button press will connect the full 5 volts of power directly to the ground which will cause a short circuit.</p>
 
@@ -46,11 +31,11 @@
 <br>
 <img src="./images/switch.svg" width=380>
 <h3>Switch</h3>
-<p>Switches come in many forms, the most common type of switch that you would want to use with a Control Board project would be a "Single Pole, Single Throw" (SPST) which means that the switch is toggling on like a button being held down and off like a button being released, or a "Single Pole, Double Throw" (SPDT) switch that turns one connection on when the switch is toggled to one side and turns another connection on when the switch is toggled to the other side.</p>
+<p>Switches come in many forms, the most common type of switch that you would want to use with a Control Board project would be a &ldquo;Single Pole, Single Throw&rdquo; (SPST) which means that the switch is toggling on like a button being held down and off like a button being released, or a &ldquo;Single Pole, Double Throw&rdquo; (SPDT) switch that turns one connection on when the switch is toggled to one side and turns another connection on when the switch is toggled to the other side.</p>
 
 <p>The SPST style switch will have two legs and should be connected identically to the Button example, with one leg connected directly to 5 volts of power and the other leg connected to two places: to Ground by way of a resistor and  also to a Digital input pin.</p>
 
-<p>The SPDT switches will have a third leg. The middle leg is the "common" leg that both sides of the switch use and is the pin that you should connect to 5 volts of power. Treat the other two legs as their own connections to a digital pin and to Ground by way of a resistor, just as in the Button example.</p>
+<p>The SPDT switches will have a third leg. The middle leg is the &ldquo;common&rdquo; leg that both sides of the switch use and is the pin that you should connect to 5 volts of power. Treat the other two legs as their own connections to a digital pin and to Ground by way of a resistor, just as in the Button example.</p>
 
 
 <br>
@@ -59,9 +44,9 @@
 <h3>Potentiometer</h3>
 <p>A Potentiometer is a variable resistor, and commonly only turns about three quarters of the way around. Think of it like a volume knob on your stereo: on one end the power resistance would be at its maximum which wouldn't let any power through, and on the other end resistance will be at its minimum letting power through full blast.</p>
 
-<p>Potentiometers come in many shapes and sizes and resistance levels. For our purposes, try to find a potentiometer with a value somewhere from 10k Ohms to 100k Ohms. You would ideally use a potentiometer that follows a linear curve (i.e. the half way point on the knob is going to be exactly 50% of the resistance), the names of linear potentiometers will start with B, such as "B10k" or "B100k".</p>
+<p>Potentiometers come in many shapes and sizes and resistance levels. For our purposes, try to find a potentiometer with a value somewhere from 10k Ohms to 100k Ohms. You would ideally use a potentiometer that follows a linear curve (i.e. the half way point on the knob is going to be exactly 50% of the resistance), the names of linear potentiometers will start with B, such as &ldquo;B10k&rdquo; or &ldquo;B100k&rdquo;.</p>
 
-<p>You will find three legs on a potentiometer, and the easiest way to wire one up is as a "voltage divider" where the leg on one far end will be connected to the full 5 volts of power, the leg on the other far end will be connect to zero volts or the Ground, and the leg in the middle will be connected to an Analog Input pin on the Arduino. The middle pin will be outputting a voltage that is somewhere between 5 volts on one end and 0 volts on the other end, depending on the position of the knob.</p>
+<p>You will find three legs on a potentiometer, and the easiest way to wire one up is as a &ldquo;voltage divider&rdquo; where the leg on one far end will be connected to the full 5 volts of power, the leg on the other far end will be connect to zero volts or the Ground, and the leg in the middle will be connected to an Analog Input pin on the Arduino. The middle pin will be outputting a voltage that is somewhere between 5 volts on one end and 0 volts on the other end, depending on the position of the knob.</p>
 
 
 <br>
@@ -92,23 +77,25 @@
 <br>
 <img src="./images/led.svg" width=380>
 <h3>Light Emitting Diode (LED)</h3>
-<p>A Light Emitting Diode will have two legs: the longer one is known as the "Anode" or the positive leg, and the shorter leg is the "Cathode" or the negative leg. The longer leg should be connected to a Digital Output pin, and the shorter leg should be connected to Ground.</p>
+<p>A Light Emitting Diode will have two legs: the longer one is known as the &ldquo;Anode&rdquo; or the positive leg, and the shorter leg is the &ldquo;Cathode&rdquo; or the negative leg. The longer leg should be connected to a Digital Output pin, and the shorter leg should be connected to Ground.</p>
 
 <p>A resistor will be required to reduce the amount of power going to the LED to keep it from burning out. For most LEDs, something in the range of 220 Ohm to 1k Ohm should be okay, the higher the value the darker the LED will be. You can place the resistor on either leg: between the Anode and the Digital pin or between the Cathode and the Ground, as long as you use one.</p>
 
-<p>If you choose a Digital pin that has either the letters "PWM" or a Tilde "~" next to the pin number, then you will be able to vary the brightness of the LED in code. Otherwise, the led will only be able to be turned on to 100% or off.</p>
+<p>If you choose a Digital pin that has either the letters &ldquo;PWM&rdquo; or a Tilde &ldquo;~&rdquo; next to the pin number, then you will be able to vary the brightness of the LED in code. Otherwise, the led will only be able to be turned on to 100% or off.</p>
 
 
 <br>
 <br>
 <img src="./images/rgbled.svg" width=380>
 <h3>Full color RGB LED</h3>
-<p>An RGB LED is three LEDs in one, one Red, one Green, one Blue. Each color will have its own leg and all three will share the fourth leg. RGB LEDs come in two styles: "Common Cathode" where the shared pin is the negative Cathode pin, or "Common Anode" where the shared pin is the positive Anode. It's most common to use the Common Cathode style, which is shown in this example.</p>
+<p>An RGB LED is three LEDs in one, one Red, one Green, one Blue. Each color will have its own leg and all three will share the fourth leg. RGB LEDs come in two styles: &ldquo;Common Cathode&rdquo; where the shared pin is the negative Cathode pin, or &ldquo;Common Anode&rdquo; where the shared pin is the positive Anode. It's most common to use the Common Cathode style, which is shown in this example.</p>
 
 <p>The longest pin is the common pin, which should be connected to Ground. The other three pins should be connected to Digital Output pins on the Arduino by way of a resistor. You can start by using the same resistor value for all three colors but since each color LED behaves differently you will have to do some work to get the correct resistor values if you want anything close to calibrated shades of color (so don't have high hopes for perfect Glyph Mark colors right out of the box).
 
 <br>
 <br>
+
+</div>
 
 </body>
 </html>

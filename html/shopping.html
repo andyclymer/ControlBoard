@@ -2,38 +2,144 @@
 <head>
 <title>ControlBoard Docs!</title>
 
-    <style type="text/css">
-    <!--
-    
-    h1 {font-family: 'American Typewriter'; font-size: 40; font-weight: normal;}
-    h2 {font-family: 'American Typewriter'; font-size: 22; font-weight: bold; letter-spacing: 1px;}
-    h3 {font-family: 'American Typewriter'; font-size: 17; font-weight: normal; letter-spacing: 0.5px;}
-    .bigLink {font-family: 'American Typewriter'; font-size: 17; font-weight: normal; letter-spacing: 0.5px;}
-    body {font-family: 'Helvetica Neue'; font-size:13;}
-    
-    a:link {color:#3333cc; text-decoration:none;}
-    a:visited {color:#3333cc; text-decoration:none;}
-    a:hover {color:#33ccff; text-decoration:none;}
-    a:active {color:#ccccff; text-decoration:none;}
-    -->
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="./style.css" />
 
 </head>
 
-
-
 <body>
 
-
+<div style="width:380px">
 
 <h1>Control Board</h1>
 <h2>Shopping for Components</h2>
 
-<p>(Coming soon)</p>
+<p>I think the beginner could use some help picking things out, since the places to buy components, and the different specifications with components themselves, could be a lot to sort through at first.</p>
+
+<p>In short, if you're getting started, I kind of think a budget kit like this could be a great way to get started:</p>
+
+<p><a href="https://www.adafruit.com/products/193">https://www.adafruit.com/products/193</a></p>
+
+<p>Supplement your kit with a few components that it's missing, such as:</p>
+
+<h3>RGB LEDs:</h3>
+
+<p><a href="https://www.adafruit.com/products/848">https://www.adafruit.com/products/848</a></p>
+<p><a href="https://www.adafruit.com/products/159">https://www.adafruit.com/products/159</a></p>
+
+<h3>Rotary Encoder:</h3>
+
+<p><a href="https://www.adafruit.com/products/377">https://www.adafruit.com/products/377</a></p>
+
+<h3>Some other buttons:</h3>
+
+<p><a href="https://www.adafruit.com/categories/235">https://www.adafruit.com/categories/235</a></p>
+
+<h3>A motor?</h3>
+
+<p><a href="https://www.adafruit.com/products/169">https://www.adafruit.com/products/169</a></p>
+
+<p>Or, read on for some more buying advice:</p>
+
+<h2>Online Stores</h2>
+
+<p>In the United States, there are two major resellers who cater to the Arduino enthusiast, Adafruit and Sparkfun, and I'm told that Floris is a great choice in Europe.</p>
+
+<p><a href="http://www.adafruit.com/">http://www.adafruit.com/</a></p>
+<p><a href="http://www.sparkfun.com/">http://www.sparkfun.com/</a></p>
+<p><a href="http://floris.cc/">http://floris.cc/</a></p>
+
+<p>You can trust that the components that they sell are probably what you're looking for, but if you're new at this just read the sections below on some helpful hints on what to look out for when buying buttons and sensors and things.</p>
+
+<p>Many of these things can also be found on Amazon and Ebay, but as far as I know you'll run into knockoffs without knowing it, but I'm not sure if that ends up being a problem or not. It might be better to go with one of these more specialized stores instead, at least for your Arduino board.</p>
+
+<p>As for the other smaller components (wire, buttons, switches), there are a lot of places to buy things, and you can find a better value as well. One place I like to buy some more general components is Tayda Electronics in the United States, and I'm told that Watterott is a good source in Germany:</p>
+
+<p><a href="http://www.taydaelectronics.com/">http://www.taydaelectronics.com/</a></p>
+<p><a href="http://www.watterott.com/">http://www.watterott.com/</a></p>
+
+<h2>Buying your Arduino</h2>
+
+<p>There are many different Arduino and Arduino-compatible boards. You'll need one which can communicate as a Serial USB device which excludes some of the smaller cheaper boards (but those can still work great for other projects, like simulating a USB keyboard).</p>
+
+<p>To keep things simple, the Arduino Uno is an excellent board for getting started with. It's a little bit big, but that can help if you're new at all of this because everything is labelled clearly on the device. It also offers some over-voltage short circuit protection from damaging the board or your computer (though you may still kill some small components like LEDs as you get started by hooking them up incorrectly, but that's ok).</p>
+
+<p><a href="http://arduino.cc/en/Main/ArduinoBoardUno">http://arduino.cc/en/Main/ArduinoBoardUno</a></p>
+
+<p>It should cost about $25.</p>
+
+<p><a href="https://www.adafruit.com/category/17">https://www.adafruit.com/category/17</a></p>
+<p><a href="https://www.sparkfun.com/categories/103">https://www.sparkfun.com/categories/103</a></p>
+<p><a href="http://floris.cc/shop/en/6-arduino-">http://floris.cc/shop/en/6-arduino-</a></p>
+
+<p>Another great board that will work just fine is the Teensy. There are a few versions available, but the only one I've tested is version 3.1. I'll add support for the other boards, as they should work as well. Think of it as a smaller, faster, better Arduino-compatible board that's great for you if you're comfortable with a little more soldering.</p>
+
+<p><a href="https://www.pjrc.com/teensy/">https://www.pjrc.com/teensy/</a></p>
+<p><a href="https://www.adafruit.com/products/1625">https://www.adafruit.com/products/1625</a></p>
+<p><a href="http://floris.cc/shop/en/8-teensy">http://floris.cc/shop/en/8-teensy</a></p>
+
+<p>It should cost about $20.</p>
+
+<h2>Components</h2>
+
+<p>Just browsing for components can give you a lot of ideas:</p>
+
+<p><a href="https://www.adafruit.com/category/54">https://www.adafruit.com/category/54</a></p>
+<p><a href="https://www.sparkfun.com/categories/51">https://www.sparkfun.com/categories/51</a><p> 
+
+<p>...but there are a few things to look out for when buying components. Just because it's a component or a sensor that can work with the Arduino doesn't mean that it will work with the Control Board extension, as some components require some extra programming or extra use of libraries on the Arduino itself, but we won't be getting into that. When in doubt keep it simple, but here are some other things to look out for:</p>
+
+<h3>Buttons and Switches:</h3>
+
+<p>If the description of a button or a keypad says that it needs to do any special tricks, like to have the micro controller scan through the columns and rows of the keypad (<a href="https://www.adafruit.com/products/1824">https://www.adafruit.com/products/1824</a>) or if it uses the &ldquo;I2C bus&rdquo; (<a href="https://www.adafruit.com/products/1616">https://www.adafruit.com/products/1616</a>) then they won't work with the Control Board extension as it is right now. Stick with simple components that wire up each button on their own, like basically everything here:
+
+<p><a href="https://www.adafruit.com/categories/235">https://www.adafruit.com/categories/235</a></p>
+
+<p>Buttons and switches always need resistors, at least for a very easy way to get them working in a basic circuit with Control Board. They come in a wide range of resistance values, but a 10k-ohm resistor should do it. Resistors can be very cheap when purchased from the right place, so you might want to buy a pack that has a lot of values.</p>
+
+<h3>LEDs</h3>
+
+<p>Again, nothing too fancy. Adafruit has a great line of &ldquo;Neopixel&rdquo; products, which are RGB LEDs in strips and arrays, but they won't work here, at least not how Control Board currently works. Keep it simple and stick to basic bare LEDs: <a href="https://www.adafruit.com/categories/90">https://www.adafruit.com/categories/90</a></p>
+
+<p>When shopping for an RGB LED there are two kinds: &ldquo;Common-Cathode&rdquo; or &ldquo;Common-Anode&rdquo;. With the simplest way of connecting them and using them with Control Board they'll both work but the Common-Anode variety would end up with the opposite range of values when adjusting the brightness. Stick with Common-Cathode for now (I'll explain more in a circuit example elsewhere)</p>
+
+<p>LEDs always need resistors. To really choose the proper resistor value to match up with a particular LED can be tricky at first, but if you don't care about dimming your LED too much (which is fine, they're usually too bright), then somewhere between 300-ohm and 1k-ohm should be just fine.</p>
+
+<h3>Potentiometers</h3>
+
+<p>A potentiometer is a variable resistor, which you would connect as an Analog Sensor to your Arduino to be able to sweep through a range of values from 0 to 1.</p>
+
+<p>They come in a range of resistance values which won't matter too much with how you're using them (perhaps look for something around 10k-ohm). But, the main thing to look out for is that there are 3 types of potentiometers: A, B, and C. The &ldquo;B&rdquo; type will have a &ldquo;Linear&rdquo; response, which means that half way through the turn the Arduino will be reading 0.5, which is probably what you want. The &ldquo;A&rdquo; type has a logarithmic curve which is more suited for audio applications, and the &ldquo;C&rdquo; type is a reverse-log. So, a &ldquo;B10k&rdquo; or even a &ldquo;B100k&rdquo; potentiometer would be great.</p>
+
+<p>If you're using a Breadboard to prototype your circuit (more on that in the next section) you'll also want to make sure that you're getting a potentiometer that can be mounted on a board. Take for example these two potentiometers:</p>
+
+<p><a href="https://www.adafruit.com/products/562">https://www.adafruit.com/products/562</a></p>
+<p><a href="http://www.taydaelectronics.com/potentiometer-variable-resistors/rotary-potentiometer/linear/1k-ohm-linear-taper-potentiometer-round-shaft-solder-lugs-3574.html">http://www.taydaelectronics.com/potentiometer-variable-resistors/rotary-potentiometer/linear/1k-ohm-linear-taper-potentiometer-round-shaft-solder-lugs-3574.html</a></p>
+
+<p>The first one has thin pins that will mount in your board, the second one is designed for wires to be soldered to it.</p>
+    
+<h3>Prototyping boards and jumper wires</h3>
+
+<p>You'll very likely want a prototyping Breadboard to get started with, which will keep you from having to do any soldering straight away, along with some jumper wires to make connections between the Arduino and your components.</p>
+
+<p>Some starter kits are also available that have a good range of components and the prototyping boards that you would need, along with the Arduino Uno itself, and could be a great choice for the beginner. As with any kit you run the risk that you're buying components you might not want (motors? battery packs?) but it might be a way to get a little bit of everything:</p>
+
+<p><a href="https://www.adafruit.com/products/193">https://www.adafruit.com/products/193</a></p>
+<p><a href="https://www.adafruit.com/products/68">https://www.adafruit.com/products/68</a></p>
+<p><a href="https://www.adafruit.com/products/170">https://www.adafruit.com/products/170</a></p>
+
+<h3>Motors</h3>
+
+<p>If you want to go crazy and add motors to your project, just watch out that most motors need to draw more power than your little Arduino can give, which would require a slightly more complex circuit and another power adapter. However, small motors can work just fine.</p>
+
+<p>A micro servo motor like this could work without any trouble:</p>
+    
+<p><a href="https://www.adafruit.com/products/169">https://www.adafruit.com/products/169</a></p>
+
 
 <br>
 <br>
+
+</div>
 
 </body>
 </html>

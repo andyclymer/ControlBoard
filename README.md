@@ -12,6 +12,9 @@ It makes generous use of the Breakfastserial, pyFirmata and serial Python librar
 - http://pyserial.sourceforge.net
 
 
+![screenshot](./html/images/button.svg "Button Circuit")
+
+
 ## The state of things
 
 I’m considering this to be a proof of concept for quickly getting simple inputs and ouputs from an Arduino into RoboFont. Currently it doesn’t save any of the settings for which components are attached to a board, and it still requires knowing the names and types of components that other scripts may be looking for.
