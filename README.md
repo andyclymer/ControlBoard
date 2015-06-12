@@ -12,7 +12,7 @@ It makes generous use of the Breakfastserial, pyFirmata and serial Python librar
 - http://pyserial.sourceforge.net
 
 
-![screenshot](./html/images/button.svg "Button Circuit")
+![screenshot](./html/images/button.jpg "Button Circuit")
 
 
 ## The state of things
