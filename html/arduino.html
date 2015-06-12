@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>ControlBoard Docs!</title>
+
+    <style type="text/css">
+    <!--
+    
+    h1 {font-family: 'American Typewriter'; font-size: 40; font-weight: normal;}
+    h2 {font-family: 'American Typewriter'; font-size: 22; font-weight: bold; letter-spacing: 1px;}
+    h3 {font-family: 'American Typewriter'; font-size: 17; font-weight: normal; letter-spacing: 0.5px;}
+    .bigLink {font-family: 'American Typewriter'; font-size: 17; font-weight: normal; letter-spacing: 0.5px;}
+    body {font-family: 'Helvetica Neue'; font-size:13;}
+    
+    a:link {color:#3333cc; text-decoration:none;}
+    a:visited {color:#3333cc; text-decoration:none;}
+    a:hover {color:#33ccff; text-decoration:none;}
+    a:active {color:#ccccff; text-decoration:none;}
+    -->
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>Control Board</h1>
+<h2>Arduino Setup</h2>
+
+<p>Before using Control Board, your Arduino will need to be configured with the Standard Firmata software. See the <a href="shopping.html">Shopping</a> page for more information on where to buy an Arduino board.
+
+<h2>A special note for Mac OS 10.9 and 10.10 users</h2>
+
+<p>Before you begin, Mac OS 10.9 and 10.10 users will need through a small process of updating the FTDI drivers that came with their computer, in order to be able to communicate with the Arduino.</p>
+
+<p>You can read more about this requirement from the Arduino forum, or just follow the steps listed below.</p>
+http://forum.arduino.cc/index.php?topic=198539.0
+
+<p>1) Start by disabling the FTDI drivers that came with your Mac. From the Terminal, type the following commands     
+<pre>    cd /System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns 
+    sudo mv AppleUSBFTDI.kext AppleUSBFTDI.disabled 
+    sudo touch /System/Library/Extensions</pre></p>
+
+<p>2) Restart your computer</p>
+
+<p>3) Then, install the correct FTDI drivers, found here:
+<pre>    http://www.ftdichip.com/Drivers/VCP.htm</pre></p>
+
+<p>You will want to choose either the 32-bit or 64-bit drivers depending on which Mac you have. To find out whether your machine is 32 or 64-bit, have a look here: https://support.apple.com/en-us/HT3696</p>
+
+<p>4) After restarting your computer once more for good measure, you will be ready to communicate over USB with your Arduino.</p>
+
+
+<h2>Installing Standard Firmata</h2>
+
+<p>To use Control Board, you'll need to upload the Standard Firmata library on your Arduino.</p>
+ 
+<p>1) Start by downloading the Arduino IDE software:
+<pre>    http://arduino.cc/en/Main/Software</pre></p>
+
+<p>2) Plug in your Arduino, and launch the the Arduino application</p>
+
+<p>3) From the "File" menu, open "Examples > Firmata > Standard Firmata"</p>
+
+<p>4) From the Tools menu, under the "Board" section, choose which kind of Arduino board you're using, and from the "Serial Port" section, choose the name of a serial port which contains "USB".</p>
+
+<p>5) Then, click the "Upload" button at the top of the StandardFirmata window, the button that has the image of an arrow.</p>
+
+<p>If all goes well, in a moment your Arduino will have the Standard Firmata library installed on it, and you'll be ready to use Control Board. You will only need to set your Arduino up once, it will retain this Standard Firmata library until you upload a new program to it another time.</p>
+
+<br>
+<br>
+
+</body>
+</html>
