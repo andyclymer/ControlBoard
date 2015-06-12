@@ -159,3 +159,9 @@ Here's an overview of the attributes received when observing for a `ControlBoard
 	"value": When the state is "on", the value is a float between 0 and 1 of the speed the motor should turn
 ```
 
+
+## Circuit Examples
+
+A full set of documentation along with some basic circuit examples are available in the `/html` directory, and are available from the “Help” menu option from the RoboFont Extensions menu.
+
+
