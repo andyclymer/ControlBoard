@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>ControlBoard Docs!</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+</head>
+
+
+
+<body>
+
+<div style="width:370px">
+
+
+
+<h1>Control Board</h1>
+<h2>Control Board Quick Start</h2>
+
+<p>The concept is simple: wire up some basic electronic components to an Arduino's input and output pins, and list what these components are in the Control Board interface.</p>
+
+<p>The "Input" components (buttons, switches, potentiometers) will broadcast "ControlBoardInput" notifications when their state has changed along with what their current state is. Likewise, when you broadcast a "ControlBoardOutput" notification from a separate script to an "Output" component (an LED, motor, etc.), its state will change.</p>
+
+<p>Control Board will try to connect to the first Arduino it finds connected over USB, click "Reconnect" to try connecting again if the board was plugged in after Control Board was opened.</p>
+
+<p>Once connected, set up your circuit components in the Control Board interface. For instance, if you have a button connected to pin #2, add an "Input: Button/Switch" component, choose pin 2, and give the component a name. Click "Apply" to send this configuration to your Arduino board.</p>
+
+<p>Now, each time your click the button, "ControlBoardInput" notifications will happen.</p>
+
+<p>The notifications will always have an "info" dictionary. The dictionary has a key for the "type" of component ("Button/Switch", "Sensor", etc.), a "name" which is the name that you gave the component in the interface, and either a "state" ("up", "down") or a "value" (a sensor value between 0 and 1).</p>
+
+<p>To post your own notifications, import the following method from RoboFont's mojo library:
+<pre>    from mojo.events import postEvent</pre></p>
+
+<p>Then, post your notification event to the desired component name, with the state the component should take, along with other optional arguments depending on the component. For example, you can turn an LED on by posting the following event:
+<pre>    postEvent("ControlBoardOutput", 
+    name="My LED", state="on")</pre>
+and then turn it back off by posting this one:
+<pre>    postEvent("ControlBoardOutput", 
+    name="My LED", state="off")</pre></p>
+
+<p>For a full explanation of all component states and values, check out the sample code in the /Examples directory and the table of Component Notifications at the end of this document.</p>
+
+<br>
+<br>
+
+
+</div>
+
+</body>
+</html>

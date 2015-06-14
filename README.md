@@ -12,6 +12,9 @@ It makes generous use of the Breakfastserial, pyFirmata and serial Python librar
 - http://pyserial.sourceforge.net
 
 
+![screenshot](./html/images/button.jpg "Button Circuit")
+
+
 ## The state of things
 
 I’m considering this to be a proof of concept for quickly getting simple inputs and ouputs from an Arduino into RoboFont. Currently it doesn’t save any of the settings for which components are attached to a board, and it still requires knowing the names and types of components that other scripts may be looking for.
@@ -155,4 +158,10 @@ Here's an overview of the attributes received when observing for a `ControlBoard
 	"state": "on", "off"
 	"value": When the state is "on", the value is a float between 0 and 1 of the speed the motor should turn
 ```
+
+
+## Circuit Examples
+
+A full set of documentation along with some basic circuit examples are available in the `/html` directory, and are available from the “Help” menu option from the RoboFont Extensions menu.
+
 

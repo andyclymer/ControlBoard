@@ -119,7 +119,7 @@ class ControlBoard:
         # ---------- Window ----------
         
         self.w = vanilla.Window((300, 400), 
-                "ControlBoard 0.21b", minSize=(300, 350), maxSize=(300, 1000), autosaveName="ControlBoardWindow")
+                "ControlBoard 0.22b", minSize=(300, 350), maxSize=(300, 1000), autosaveName="ControlBoardWindow")
         self.w.bind("close", self._closingWindowCallback)
         
         yPos = 10
