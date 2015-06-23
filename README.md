@@ -12,6 +12,8 @@ It makes generous use of the Breakfastserial, pyFirmata and serial Python librar
 - http://pyserial.sourceforge.net
 
 
+![screenshot](./html/images/interface.jpg "Control Board interface")
+
 ![screenshot](./html/images/button.jpg "Button Circuit")
 
 
