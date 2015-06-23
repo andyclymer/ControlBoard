@@ -9,3 +9,7 @@ a:link {color:#3333cc; text-decoration:none;}
 a:visited {color:#3333cc; text-decoration:none;}
 a:hover {color:#33ccff; text-decoration:none;}
 a:active {color:#ccccff; text-decoration:none;}
+
+#fullBlock {width:780px; border-style:solid; border-width:0px; padding-left:40px; padding-top:20px; padding-right:40px;}
+#columnLeft {width:370px; border-style:solid; border-width:0px; min-height:450; padding:10px;}
+#columnRight {width:370px; float:right; border-style:solid; border-width:0px; padding:10px;}
